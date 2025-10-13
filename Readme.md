@@ -19,6 +19,7 @@ This project is built using the following technologies:
 *   **Frontend:** React.js / Next.js
 *   **Styling:** Tailwind CSS
 *   **Language:** TypeScript
+*   **Scripting:** Python (for data processing/analysis)
 *   **Backend:** Next.js API Routes
 *   **Database:** Supabase (PostgreSQL)
 *   **Deployment:** Vercel
