@@ -38,7 +38,7 @@ Make sure you have the following installed on your system:
 ### Installation
 
 1.  **Clone the repository**
-    Open your terminal and run the following command. Replace `your-username` with your actual GitHub username.
+    Open your terminal and run the following command. 
     ```bash
     git clone https://github.com/ifih/terrestrial.git
     ```
