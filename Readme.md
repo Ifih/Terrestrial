@@ -1,4 +1,4 @@
-# Terrestrial
+# Land Degradation Monitor
 
 A modern, responsive web application for monitoring land degradation, built with cutting-edge technologies. This project showcases a seamless user experience with a focus on performance and design.
 
@@ -19,8 +19,8 @@ This project is built using the following technologies:
 *   **Frontend:** React.js / Next.js
 *   **Styling:** Tailwind CSS
 *   **Language:** TypeScript
-*   **Scripting:** Python (for data processing/analysis)
 *   **Backend:** Next.js API Routes
+*   **Scripting:** Python (for data processing/analysis)
 *   **Database:** Supabase (PostgreSQL)
 *   **Deployment:** Vercel
 
