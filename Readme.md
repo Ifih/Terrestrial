@@ -120,7 +120,8 @@ Terrestrial is an advanced environmental monitoring platform that combines multi
 
 ### System Architecture
 
-\`\`\`
+```
+
 ┌─────────────────────────────────────────────────────────────┐
 │                     Client (Browser)                         │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │
@@ -147,7 +148,7 @@ Terrestrial is an advanced environmental monitoring platform that combines multi
 │ - Auth       │  │ - CNN        │  │ - Streaming  │
 │ - Storage    │  │ - PyTorch    │  │              │
 └──────────────┘  └──────────────┘  └──────────────┘
-\`\`\`
+```
 
 ### Data Flow
 
