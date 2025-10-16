@@ -2,6 +2,8 @@
 
 A comprehensive full-stack application that leverages artificial intelligence, machine learning, and satellite imagery analysis to monitor, predict, and mitigate land degradation. Built with Next.js 15, Supabase, and advanced AI models.
 
+**Live Demo:** **https://terrestrial.vercel.app/**
+
 ![Terrestrial Platform](public/placeholder-logo.svg)
 
 ## Table of Contents
