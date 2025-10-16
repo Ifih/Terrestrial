@@ -1,0 +1,16 @@
+# Python dependencies required by the ML scripts in scripts/ml_models/
+# - Use a Python 3.10+ interpreter (3.11+ recommended).
+# - For PyTorch, choose the appropriate install command for your OS/CUDA: see https://pytorch.org/get-started/locally/
+
+torch>=2.0.0
+numpy>=1.25.0
+pillow>=9.5.0
+scikit-learn>=1.2.0
+pandas>=2.0.0
+
+# Optional / handy packages
+# torchvision (if you want built-in transforms/datasets): torchvision>=0.15.0
+# torchaudio (if using audio models): torchaudio>=2.0.0
+
+# If you want a stable CPU-only PyTorch install, run (example):
+#   pip install "torch>=2.0.0" --index-url https://download.pytorch.org/whl/cpu

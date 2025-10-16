@@ -53,20 +53,33 @@ export default async function HomePage() {
 
       <main className="mx-auto max-w-7xl px-6 py-16">
         {/* Hero */}
-        <div className="mb-16 text-center">
-          <h1 className="mb-4 text-5xl font-bold text-emerald-900 text-balance">
-            AI-Powered Land Degradation Monitoring
-          </h1>
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-emerald-700 text-pretty">
-            Leverage advanced AI and satellite imagery to detect, analyze, and mitigate land degradation. Protect our
-            planet with cutting-edge technology.
-          </p>
-          <Link href="/auth/sign-up">
-            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-              Start Analyzing
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
+        <div
+          className="mb-16 text-center relative rounded-2xl overflow-hidden"
+          style={{
+            backgroundImage: `url('/satellite-view-of-earth-terrain-with-forests-and-a.jpg')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/85 via-teal-900/80 to-cyan-900/85" />
+
+          {/* Content */}
+          <div className="relative z-10 py-24 px-6">
+            <h1 className="mb-4 text-5xl font-bold text-white text-balance drop-shadow-lg">
+              AI-Powered Land Degradation Monitoring
+            </h1>
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-emerald-50 text-pretty drop-shadow-md">
+              Leverage advanced AI and satellite imagery to detect, analyze, and mitigate land degradation. Protect our
+              planet with cutting-edge technology.
+            </p>
+            <Link href="/auth/sign-up">
+              <Button size="lg" className="bg-white text-emerald-900 hover:bg-emerald-50 shadow-xl">
+                Start Analyzing
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
 
         <div className="mb-16">

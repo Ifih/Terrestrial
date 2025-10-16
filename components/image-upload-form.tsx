@@ -1,5 +1,10 @@
 "use client"
 
+/**
+ * A form component for uploading satellite images and their associated metadata.
+ * It handles file selection, metadata input, form submission, and API communication
+ * for uploading the image and creating an analysis record.
+ */
 import type React from "react"
 
 import { useState } from "react"
@@ -12,6 +17,7 @@ import { Upload, Loader2 } from "lucide-react"
 import { useRouter } from "next/navigation"
 
 export function ImageUploadForm() {
+  // State for managing the selected file and form inputs.
   const [file, setFile] = useState<File | null>(null)
   const [locationName, setLocationName] = useState("")
   const [latitude, setLatitude] = useState("")
@@ -22,12 +28,14 @@ export function ImageUploadForm() {
   const [error, setError] = useState<string | null>(null)
   const router = useRouter()
 
+  // Handles the file input change event.
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       setFile(e.target.files[0])
     }
   }
 
+  // Handles the form submission.
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!file) {
@@ -39,6 +47,7 @@ export function ImageUploadForm() {
     setError(null)
 
     try {
+      // Use FormData to construct a multipart/form-data request for file upload.
       const formData = new FormData()
       formData.append("file", file)
       formData.append("locationName", locationName)
@@ -54,6 +63,7 @@ export function ImageUploadForm() {
 
       if (!response.ok) throw new Error("Upload failed")
 
+      // On success, redirect the user to the analysis page for the new image.
       const data = await response.json()
       router.push(`/analysis/${data.image.id}`)
     } catch (err) {

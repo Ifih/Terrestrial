@@ -1,5 +1,9 @@
 "use client"
 
+/**
+ * A form for generating future land degradation predictions based on climate scenarios.
+ * Users can input a location and select a scenario to forecast potential environmental changes.
+ */
 import type React from "react"
 
 import { useState } from "react"
@@ -11,11 +15,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Loader2 } from "lucide-react"
 
 interface PredictionFormProps {
+  // Optional callback function to be executed when a prediction is successfully created.
   onPredictionCreated?: (prediction: any) => void
 }
 
 export function PredictionForm({ onPredictionCreated }: PredictionFormProps) {
   const [loading, setLoading] = useState(false)
+  // State to hold all form data in a single object.
   const [formData, setFormData] = useState({
     location_name: "",
     latitude: "",
@@ -24,6 +30,7 @@ export function PredictionForm({ onPredictionCreated }: PredictionFormProps) {
     predicted_for_year: "2050",
   })
 
+  // Handles form submission to the predictions API endpoint.
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
@@ -33,6 +40,7 @@ export function PredictionForm({ onPredictionCreated }: PredictionFormProps) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          // Convert string inputs to numbers before sending.
           ...formData,
           latitude: Number.parseFloat(formData.latitude),
           longitude: Number.parseFloat(formData.longitude),
@@ -43,9 +51,10 @@ export function PredictionForm({ onPredictionCreated }: PredictionFormProps) {
       if (!response.ok) throw new Error("Failed to create prediction")
 
       const { prediction } = await response.json()
+      // Trigger the callback if it was provided.
       onPredictionCreated?.(prediction)
 
-      // Reset form
+      // Reset the form to its initial state after successful submission.
       setFormData({
         location_name: "",
         latitude: "",
