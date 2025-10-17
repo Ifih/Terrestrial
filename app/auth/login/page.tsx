@@ -43,7 +43,7 @@ export default function LoginPage() {
       <div className="w-full max-w-sm">
         <Card className="border-emerald-200">
           <CardHeader className="space-y-1">
-            <CardTitle className="text-2xl font-bold text-emerald-900">Land Degradation Monitor</CardTitle>
+            <CardTitle className="text-2xl font-bold text-emerald-900">Terrestrial</CardTitle>
             <CardDescription className="text-emerald-700">Sign in to access AI-powered land analysis</CardDescription>
           </CardHeader>
           <CardContent>

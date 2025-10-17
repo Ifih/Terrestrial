@@ -33,7 +33,7 @@ export default async function HomePage() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-2">
             <Satellite className="h-8 w-8 text-emerald-600" />
-            <span className="text-xl font-bold text-emerald-900">Land Degradation Monitor</span>
+            <span className="text-xl font-bold text-emerald-900">Terrestrial</span>
           </div>
           <div className="flex gap-2">
             <Link href="/auth/login">
@@ -246,7 +246,7 @@ export default async function HomePage() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Satellite className="h-6 w-6 text-emerald-600" />
-                <span className="text-lg font-bold text-emerald-900">Land Degradation Monitor</span>
+                <span className="text-lg font-bold text-emerald-900">Terrestrial</span>
               </div>
               <p className="text-sm text-emerald-700">
                 AI-powered platform for monitoring and mitigating land degradation worldwide.
@@ -316,7 +316,7 @@ export default async function HomePage() {
           </div>
 
           <div className="mt-8 border-t border-emerald-200 pt-8 text-center text-sm text-emerald-700">
-            <p>&copy; {new Date().getFullYear()} Land Degradation Monitor. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Terrestrial. All rights reserved.</p>
             <p className="mt-2">Powered by AI • Built for a sustainable future</p>
           </div>
         </div>
